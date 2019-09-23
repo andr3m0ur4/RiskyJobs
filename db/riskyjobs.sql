@@ -4,7 +4,7 @@ CREATE TABLE `riskyjobs` (
   `description` MEDIUMTEXT,
   `city` VARCHAR(100),
   `state` VARCHAR(100),
-  `zip` VARCHAR(5),
+  `zip` VARCHAR(8),
   `company` VARCHAR(30),
   `date_posted` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`job_id`)
