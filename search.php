@@ -32,19 +32,19 @@
                 '</tr>';
 
             // Conecta-se ao banco de dados
-            require_once 'connectvars.php';
-            $dbc = mysqli_connect ( DB_HOST, DB_USER, DB_PASSWORD, DB_NAME );
+            require_once 'config/connectvars.php';
+            $dbc = new SQL ( DB_HOST, DB_USER, DB_PASSWORD, DB_NAME );
 
             // Consulta para obter o total de resultados
             $query = build_query ( $user_search, $sort );
-            $result = mysqli_query ( $dbc, $query );
-            $total = mysqli_num_rows ( $result );
+            $result = $dbc -> select ( $query );
+            $total = $result -> num_rows;
             $num_pages = ceil ( $total / $results_per_page );
 
             // Consulta novamente para obter apenas o subconjunto de resultados
             $query =  $query . " LIMIT $skip, $results_per_page";
-            $result = mysqli_query ( $dbc, $query );
-            while ( $row = mysqli_fetch_assoc ( $result ) ) {
+            $result = $dbc -> select ( $query );
+            while ( $row = $result -> fetch_assoc ( ) ) {
                 echo "<tr class='results'>
                         <td valign='top' width='20%'>{$row['title']}</td>
                         <td valign='top' width='50%'>" . substr ( $row['description'], 0, 100 ) . "...</td>
@@ -59,7 +59,6 @@
                 echo generate_page_links ( $user_search, $sort, $cur_page, $num_pages );
             }
 
-            mysqli_close ( $dbc );
         ?>
 
     </body>

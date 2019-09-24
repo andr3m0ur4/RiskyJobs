@@ -4,3 +4,7 @@
     define('DB_USER', 'admin');
     define('DB_PASSWORD', 'danger');
     define('DB_NAME', 'riskyjobs');
+
+    include_once 'class/SQL.php';
+    include_once 'class/RiskyJob.php';
+    
