@@ -1,11 +1,11 @@
 <?php  
 
-include_once 'config/connectvars.php';
-include_once 'class/SQL.php';
+require_once 'vendor/autoload.php';
 
-$obj = new SQL ( DB_HOST, DB_USER, DB_PASSWORD, DB_NAME );
+$app = new \Slim\Slim ( );
 
-$result = $obj -> select ( "SELECT * FROM riskyjobs" );
-var_dump($result);
+$app -> get ( '/', function ( ) {
+	header ( "Location: search.html" );
+});
 
-?>
+$app->run();
