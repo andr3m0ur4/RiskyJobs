@@ -38,12 +38,6 @@ class DALRiskyJob
 
 	}
 	
-	public function __destruct ( ) {
-
-		$this -> con -> close ( );
-
-	}
-
 	// Este método cria uma consulta de busca a partir das palavras-chave da busca e configuração 
 	// de classificação
 	public function build_query ( $user_search, $sort )
@@ -120,6 +114,13 @@ class DALRiskyJob
 	    }
 
 	    return $search_query;
+
+	}
+
+	public function __destruct ( )
+	{
+
+		$this -> con -> close ( );
 
 	}
 }

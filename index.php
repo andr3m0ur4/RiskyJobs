@@ -6,6 +6,7 @@ require 'config/config.php';
 require 'helpers/database.php';
 require 'helpers/helpers.php';
 require 'models/RiskyJob.php';
+require 'models/Jobber.php';
 require 'models/DALRiskyJob.php';
 
 // Criar um	objeto da classe DAL
