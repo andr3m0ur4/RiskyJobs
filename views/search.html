@@ -9,16 +9,16 @@
         <meta name="keywords" content="php mysql trabalho perigoso">
         <meta name="autor" content="André Moura">
         <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
-        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="stylesheet" type="text/css" href="assets/style.css" />
     </head>
     <body>
-        <img src="image/riskyjobs_title.gif" alt="Risky Jobs" />
+        <a href="/riskyjobs"><img src="image/riskyjobs_title.gif" alt="Risky Jobs" /></a>
         <img src="image/riskyjobs_fireman.jpg" alt="Risky Jobs" style="float:right" />
         <h3>Risky Jobs - Busca</h3>
-        <form method="get" action="search.php">
+        <form method="get" action="index.php">
             <label for="usersearch">Encontre seu trabalho arriscado:</label><br />
             <input type="text" id="usersearch" name="usersearch" /><br />
-            <button name="submit">Buscar</button>
+            <button type="submit" name="rota" value="search">Buscar</button>
         </form>
     </body>
 </html>
