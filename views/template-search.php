@@ -11,8 +11,12 @@
         <link rel="stylesheet" type="text/css" href="assets/style.css" />
     </head>
     <body>
-        <a href="/riskyjobs"><img src="image/riskyjobs_title.gif" alt="Risky Jobs" /></a>
-        <img src="image/riskyjobs_fireman.jpg" alt="Risky Jobs" style="float:right" />
+        <a href="/riskyjobs">
+            <img src="image/riskyjobs_title.gif" alt="Risky Jobs" />
+        </a>
+        <a href="/riskyjobs?rota=registration">
+            <img src="image/riskyjobs_fireman.jpg" alt="Risky Jobs" style="float:right" />
+        </a>
         <h3>Risky Jobs - Resultados da Busca</h3>
 
         <!-- Inicia gerando a tabela de resultados -->
