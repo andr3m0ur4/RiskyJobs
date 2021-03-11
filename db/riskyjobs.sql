@@ -1,3 +1,6 @@
+CREATE DATABASE IF NOT EXISTS `riskyjobs` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `riskyjobs`;
+
 CREATE TABLE `riskyjobs` (
   `job_id` INT AUTO_INCREMENT,
   `title` VARCHAR(200),

@@ -43,7 +43,7 @@
             }
         }
 
-        if ( !preg_match ( '/^\(?[1-9]\d{1}\)?[-\s]\d{4}-\d{4}$/', $jobber -> getPhone ( ) ) ) {
+        if ( !preg_match ( '/^\(?[1-9]\d{1}\)?[-\s]\d{5}-\d{4}$/', $jobber -> getPhone ( ) ) ) {
             // $phone não é válido
             $error_validate['phone'] = 'Seu número de telefone é inválido.';
             $output_form = 'yes';

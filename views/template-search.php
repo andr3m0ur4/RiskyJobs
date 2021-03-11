@@ -11,12 +11,12 @@
         <link rel="stylesheet" type="text/css" href="assets/style.css" />
     </head>
     <body>
-        <a href="/riskyjobs"><img src="image/riskyjobs_title.gif" alt="Risky Jobs" /></a>
+        <a href="/"><img src="image/riskyjobs_title.gif" alt="Risky Jobs" /></a>
         <img src="image/riskyjobs_fireman.jpg" alt="Risky Jobs" style="float:right" />
         <h3>Risky Jobs - Resultados da Busca</h3>
 
         <!-- Inicia gerando a tabela de resultados -->
-        <table border="0" cellpadding="2">
+        <table cellpadding="2">
             <!-- Gera os tópicos do resultado da busca -->
             <tr class='heading'>
                 <?= generate_sort_links ( $user_search, $sort ) ?>
@@ -31,14 +31,14 @@
                     <td valign='top' width='10%'><?= $job -> getState ( ) ?></td>
                     <td valign='top' width='20%'><?= substr ( $job -> getDatePosted ( ), 0, 10 ) ?></td>
                 </tr>
-            <?php endforeach; ?>
+            <?php endforeach ?>
 
         </table>
 
         <!-- Gera os links de navegação de página se tivermos mais do que uma página -->
         <?php if ( $num_pages > 1 ) : ?>
             <?= generate_page_links ( $user_search, $sort, $cur_page, $num_pages ) ?>
-        <?php endif; ?>
+        <?php endif ?>
 
     </body>
 </html>

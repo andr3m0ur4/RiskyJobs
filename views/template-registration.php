@@ -11,8 +11,8 @@
         <link rel="stylesheet" type="text/css" href="assets/style.css" />
     </head>
     <body>
-        <a href="/riskyjobs"><img src="image/riskyjobs_title.gif" alt="Risky Jobs" /></a>
-        <a href="/riskyjobs?rota=registration">
+        <a href="/"><img src="image/riskyjobs_title.gif" alt="Risky Jobs" /></a>
+        <a href="/?rota=registration">
             <img src="image/riskyjobs_fireman.jpg" alt="Risky Jobs" style="float:right" />
         </a>
         <h3>Risky Jobs - Cadastro</h3>
@@ -47,7 +47,7 @@
                     <tr>
                         <td><label for="phone">Telefone:</label></td>
                         <td>
-                            <input id="phone" name="phone" type="tel" pattern="\([0-9]{2}\) [0-9]{4}-[0-9]{4}" value="<?= $jobber -> getPhone( ) ?>" required placeholder="(00) 0000-0000">
+                            <input id="phone" name="phone" type="tel" pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}" value="<?= $jobber -> getPhone( ) ?>" placeholder="(00) 00000-0000" required>
                         </td>
                     </tr>
                     <tr>
